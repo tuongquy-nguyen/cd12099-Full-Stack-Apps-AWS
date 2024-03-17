@@ -20,7 +20,7 @@ To complete this project, you will need to:
 Screenshots are placed in `deployment_screenshots` folder
 
 This is the request URL which return processed image:
-NOTE: I have applied authorization token for blocking public requests, please add Authorization header with value "dummyToken" on your client in order to perform request.
+NOTE: I have applied authorization token for blocking public requests, please import Postman collection name: "Fullstack-App-Project2.postman_collection.json" inside this repository to perform request as expected.
 
 URL: http://cd12099-full-stack-apps-aws-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/2Golden_tabby_and_white_kitten_n01.jpg
 
