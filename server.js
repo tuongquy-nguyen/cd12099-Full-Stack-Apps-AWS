@@ -1,6 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import {filterImageFromURL, deleteLocalFiles, authenticateRequest} from './util/util.js';
+import {filterImageFromURL, deleteLocalFiles} from './util/util.js';
 
 
 
@@ -14,7 +14,7 @@ import {filterImageFromURL, deleteLocalFiles, authenticateRequest} from './util/
   app.use(bodyParser.json());
 
   // Filtering images endpoint
-  app.get("/filteredimage", authenticateRequest, async (req, res) => {
+  app.get("/filteredimage", async (req, res) => {
     const { image_url } = req.query;
     if (!image_url) {
       return res.status(400).send("Image URL is invalid");
