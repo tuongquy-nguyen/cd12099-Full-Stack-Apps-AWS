@@ -31,6 +31,20 @@ export async function filterImageFromURL(inputURL) {
   });
 }
 
+export function authenticateRequest(req, res, next) {
+  const token = req.headers.authorization;
+
+  const secretToken = "dummyToken";
+
+  if (!token || token !== secretToken) {
+    return res
+      .status(401)
+      .send("Unauthorized: Missing or invalid authentication token");
+  }
+
+  next();
+}
+
 // deleteLocalFiles
 // helper function to delete files on the local disk
 // useful to cleanup after tasks
